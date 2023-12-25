@@ -1,22 +1,23 @@
 // App.js
 import React, { useState } from 'react';
-import TimerButton from './TimerButton'; // Import the TimerButton component
+import TimerButton from './TimerButton';
+import './App.css'; // Import the CSS file
 
 const App = () => {
-  const [displayString, setDisplayString] = useState(''); // State to hold the display string
+  const [displayString, setDisplayString] = useState('');
 
-  // Function to update the displayed string
   const updateDisplayString = () => {
-    setDisplayString('Your string here'); // Update the string as needed
+    setDisplayString('Your string here');
   };
 
   return (
     <div>
-      <h1>CLICK BUTTON FOR A PROBLEM</h1>
-      <TimerButton onClick={updateDisplayString} /> {/* Pass a function to update the string */}
-      <div>{displayString}</div> {/* Display the string in a div */}
+      <h1>CODE TIME!</h1>
+      <TimerButton onClick={updateDisplayString} />
+      <div className="problem-container">{displayString}</div> {/* Apply the CSS class */}
     </div>
   );
 };
 
 export default App;
+

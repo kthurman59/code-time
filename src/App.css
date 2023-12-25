@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+.problem-container {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Add spacing between elements */
+h1 {
+  margin-bottom: 20px;
+}
+
+.TimerButton {
+  margin-bottom: 20px;
+}
