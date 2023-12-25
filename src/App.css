@@ -47,6 +47,11 @@
 /* Add spacing between elements */
 h1 {
   margin-bottom: 20px;
+  align-items: center;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .TimerButton {
