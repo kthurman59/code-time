@@ -1,13 +1,10 @@
-// index.js
 import React from 'react';
-import ReactDOM from 'react-dom'; // Import the ReactDOM library
-import App from './App'; // Import the main App component
-import TimerButton from './TimerButton'; // Import the TimerButton component
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root')); // Create a root instance
-
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App /> {/* Render the App component */}
-  </React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );

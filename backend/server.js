@@ -2,24 +2,16 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const Problem = require('./models/Problem'); // Adjust the path based on your file structure
 
 // Connect to MongoDB Atlas (replace 'YOUR_CONNECTION_STRING' with your MongoDB Atlas connection string)
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-
-// Define MongoDB Schema and Model (using Mongoose)
-const problemSchema = new mongoose.Schema({
-    text: String,
-    category: String,
-  });
-  
-  const Problem = mongoose.model('Question', problemSchema);
-
 // Define route to get questions
 app.get('/problems', async (req, res) => {
   try {
-    const problems = await Problem.find(); // Fetch questions from MongoDB
-    res.json(problems); // Send questions as JSON response
+    const problems = await Problem.find(); // Fetch problems from MongoDB
+    res.json(problems); // Send problems as JSON response
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
